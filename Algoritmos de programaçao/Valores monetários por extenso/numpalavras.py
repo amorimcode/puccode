@@ -5,17 +5,7 @@ from num2words import num2words
 
 
 def number_to_long_number(number_p):
-    if number_p < 0:
-        global negative
-        negative = True
-    else:
-        negative = False
-
-        if negative:  # if negativo==True:
-            print("menos ", end="")
-
         try:
-
             if number_p.find('.') != -1:
                 number_p = number_p.split('.')
                 number_p1 = int(number_p[0].replace('.', ''))
@@ -54,4 +44,4 @@ def number_to_long_number(number_p):
         except ValueError:
             print("Valores monetários não devem conter letras ou outros caracteres não numéricos!")
 
-number_to_long_number(number_p = float(input('Digite um número: ')))
+number_to_long_number(number_p = input('Digite o valor desejado: '))
